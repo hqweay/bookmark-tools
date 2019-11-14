@@ -1,3 +1,7 @@
+# example
+
+![](https://github.com/hqweay/bookmark-converter/blob/master/screenshot/show.gif?raw=true)
+
 # Bookmark Converter
 
 a chrome extention that convert your bookmarks to markdown.
