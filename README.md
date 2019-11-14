@@ -6,6 +6,11 @@
 
 a chrome extention that convert your bookmarks to markdown.
 
+# TODO
+
+- [ ] 右键复制标题与链接为 markdown。
+- [ ] 获取书签网址的 RSS（如果有的话）。
+
 # 说明
 
 来自之前的两个念头，一个是写博文时参考过的一些文章放在书签栏，要是能一键将这些书签生成 markdown 格式插到文章末尾就好了...
