@@ -1,0 +1,27 @@
+{
+  "name": "Bookmarks-Converter",
+  "version": "1.0",
+  "description": "convert your bookmarks to markdown etc.",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true,
+    "open_in_tab": true
+  },
+  "permissions": [
+    "bookmarks",
+    "webRequest"
+  ],
+  "manifest_version": 2,
+  "homepage_url": "https://leay.net",
+  "author": "hqweay"
+}

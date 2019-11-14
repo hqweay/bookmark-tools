@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Bookmark Rss</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 1em;
+
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        h2 {
+            font-size: 2.0em;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+
+        .gray {
+            background-color: aliceblue;
+            color: black;
+        }
+
+
+        .application {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+
+        .application .ipt {
+            margin-bottom: 0.8em;
+        }
+
+        .cnt-about,
+        .mrk-cnt,
+        .scanner {
+            margin-top: 2em;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <h1>Bookmarks To Markdown And ...</h1>
+    <div class="application">
+        <input class="ipt" type="text" placeholder="Input Your Folder Name">
+        <div class="btn">
+            Recursion: <input id="recursion" type="checkbox">
+            <button id="btn-click">Click</button>
+        </div>
+    </div>
+
+
+    <div class="scanner" hidden>
+        <h1>Rss Scanner</h1>
+        <!-- scan diagram -->
+    </div>
+
+
+    <div class="mrk-cnt">
+        <h1>Bookmarks To Markdown</h1>
+        <textarea id="mrk-cnt" cols="50" rows="10"></textarea>
+    </div>
+
+    <div class="cnt-about">
+        <!-- opretion  description -->
+        <h1>
+            Input Example:
+        </h1>
+        <div>
+            <p>other bookmark::picture</p>
+            <p>书签栏::成人网站</p>
+            <p>书签栏::博客::技术博客</p>
+        </div>
+    </div>
+
+    <script src="/jquery.min.js"></script>
+    <script src="/options.js"></script>
+</body>
+
+</html>
