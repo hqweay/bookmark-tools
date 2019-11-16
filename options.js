@@ -43,7 +43,7 @@ function getBookMarkDown(list) {
     } else {
         str = '# List\n';
         for (let i = 0; i < list.length; i++) {
-            str = str.concat('[').concat(list[i].title).concat(']').concat('(').concat(list[i].url).concat(')\n');
+            str = str.concat('[').concat(list[i].title).concat(']').concat('(').concat(list[i].url).concat(')\n\n');
         }
 
     }
