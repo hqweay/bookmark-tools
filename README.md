@@ -1,12 +1,15 @@
 # example
 
-![](https://github.com/hqweay/bookmark-converter/blob/master/screenshot/show.gif?raw=true)
+![](https://github.com/hqweay/bookmark-converter/blob/master/screenshot/2020-09-13_13-41.png?raw=true)
 
-# Bookmark Converter
+![](https://github.com/hqweay/bookmark-converter/blob/master/screenshot/2020-09-13_13-40.png?raw=true)
 
-a chrome extention that convert your bookmarks to markdown.
+# Bookmark tools
 
-Recursion Option : convert bookmark links under subdirectories .
+**Get XX from bookmarks.**
+
+* get a random bookmark from bookmarks.
+* get markdown from bookmarks.
 
 # ~~TODO~~
 
