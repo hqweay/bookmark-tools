@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.8em;
+}
+
+h2 {
+    font-size: 2.0em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+#label{
+    line-height: 2.2em;
+}
+.label {
+    background-color: aliceblue;
+    color: black;
+    margin-right: 1.2em;
+}
+.label:hover {
+    background-color: rgb(188, 42, 207); 
+}
+
+#application {
+    margin-top: 1.2em;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#application .ipt {
+    margin-bottom: 0.8em;
+}
+
+#view-random, #view-markdown, #error{
+    margin-top: 1.2em;
+}
+
+#error p{
+    color: rgb(34, 126, 34);
+}

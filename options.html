@@ -5,90 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Find Bookmark Rss</title>
-    <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-            font-size: 1em;
-
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 1em;
-        }
-
-        h2 {
-            font-size: 2.0em;
-        }
-
-        p {
-            font-size: 1.5em;
-        }
-
-        .gray {
-            background-color: aliceblue;
-            color: black;
-        }
-
-
-        .application {
-            display: flex;
-            flex-direction: column;
-            width: 30%;
-        }
-
-        .application .ipt {
-            margin-bottom: 0.8em;
-        }
-
-        .cnt-about,
-        .mrk-cnt,
-        .scanner {
-            margin-top: 2em;
-        }
-    </style>
+    <title>Get XX from Bookmarks</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 
-
-
 <body>
+    <div id="app">
+        <h1>get
+            <select v-model="config.selected">
+                <option value="random" selected>a random bookmark</option>
+                <option value="markdown">markdown</option>
+            </select>
+            from </h1>
 
-    <h1>Bookmarks To Markdown And ...</h1>
-    <div class="application">
-        <input class="ipt" type="text" placeholder="Input Your Folder Name">
-        <div class="btn">
-            Recursion: <input id="recursion" type="checkbox">
-            <button id="btn-click">Click</button>
+        <div id="label">
+            <span @click="chooseFolder(folder)" class="label" v-for="folder in folders">
+                {{folder}}
+            </span>
+        </div>
+        <div id="application">
+            <input class="ipt" type="text" v-model="folderName" placeholder="Input Your bookmark Folder Name">
+            <div class="btn">
+                include subfolders: <input v-model="recursionConfig" id="recursion" type="checkbox">
+                <button id="btn-click" @click="init">Click</button>
+            </div>
+        </div>
+        <div id="view-random" v-show='config.selected=="random" && randomBookmark.url != ""'>
+            <button @click="removeBookmarkByID(randomBookmark.id)">remove</button> ：
+            <a target="_blank" :href="randomBookmark.url">{{randomBookmark.title}}</a>
+        </div>
+        <div id="view-markdown" v-show='config.selected=="markdown"'>
+            <h1>Bookmarks To Markdown</h1>
+            <textarea v-model="markdown.content" id="mrk-cnt" cols="50" rows="10"></textarea>
+        </div>
+        <div id="error" v-show='errorInfo.trim() !== ""'>
+            <h1>Error</h1>
+            <p>{{errorInfo}}</p>
         </div>
     </div>
 
-
-    <div class="scanner" hidden>
-        <h1>Rss Scanner</h1>
-        <!-- scan diagram -->
-    </div>
-
-
-    <div class="mrk-cnt">
-        <h1>Bookmarks To Markdown</h1>
-        <textarea id="mrk-cnt" cols="50" rows="10"></textarea>
-    </div>
-
-    <div class="cnt-about">
-        <!-- opretion  description -->
-        <h1>
-            Input Example:
-        </h1>
-        <div>
-            <p>other bookmark::picture</p>
-            <p>书签栏::成人网站</p>
-            <p>书签栏::博客::技术博客</p>
-        </div>
-    </div>
-
-    <script src="/jquery.min.js"></script>
+    <script src="/vue.js"></script>
     <script src="/options.js"></script>
 </body>
 
